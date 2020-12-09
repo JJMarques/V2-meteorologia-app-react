@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-export const changeDistrict = async (s) => {
+export const changeDistrict = (s) => {
+    
     let districts = []
+    //capitalize first letter
     let input = s.charAt(0).toUpperCase() + s.slice(1)
-    console.log(input);
-
-    await axios.get('https://api.ipma.pt/open-data/distrits-islands.json')
+    axios.get('https://api.ipma.pt/open-data/distrits-islands.json')
     .then((r) => {
         let res = r.data.data
         res.filter((d) => {
@@ -13,6 +13,6 @@ export const changeDistrict = async (s) => {
             districts.push(d.local)
         })
     })
-
-    //Falta fazer um filtro para todos os distritos que correspondem com a pesquisa
+    //console.log(districts);
+    return districts
 }
