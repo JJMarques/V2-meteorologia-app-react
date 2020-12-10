@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import './style/Input.css'
 
-const Input = () => {
+const Input = ({ changeDistrito }) => {
     
     const [data, setData] = useState([]);
     const [query, setQuery] = useState('');
@@ -28,7 +28,6 @@ const Input = () => {
             }
         });
         setDistritos(arr)
-        console.log(distritos)
     }
 
     useEffect(() => {
@@ -41,7 +40,7 @@ const Input = () => {
     
     return (
         <div className="Input">
-            <h2>Pesquise o seu distrito </h2>
+            <h2>Pesquise o seu distrito 🔍</h2>
             <input 
                 value={query}
                 type="search"
@@ -50,7 +49,14 @@ const Input = () => {
             />
             {distritos.map((item) => {
                 if (query !== "") {
-                    return <h5 key={item.id}>{item.name}</h5>
+                    return (
+                        <div 
+                            className="AutocompleteBtn" 
+                            key={item.id}
+                            onClick={() => {changeDistrito(item); setQuery("")}}
+                        >
+                            {item.name}
+                        </div>)
                 }
             })}
         </div>

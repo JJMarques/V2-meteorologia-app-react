@@ -13,7 +13,7 @@
     }
 
     .Input input {
-        margin: 1.5em;
+        margin-top: 1.5em;
         background: white;
         color: black;
         opacity: 0.6;
@@ -23,4 +23,21 @@
         font-size: 1.1em;
         padding: 1em;
         border-radius: 10px;
+    }
+
+.AutocompleteBtn {
+    padding: 1em;
+    background-color: white;
+    width: 420px;
+    opacity: 0.4;
+    border-bottom: rgb(134, 134, 134) 1px solid;
+    cursor: pointer;
+}
+
+    .AutocompleteBtn:hover {
+        opacity: 0.6;
+    }
+
+    .AutocompleteBtn:last-child {
+        border-radius: 0px 0px 10px 10px
     }
