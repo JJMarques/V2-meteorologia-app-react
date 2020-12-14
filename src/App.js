@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { FiGithub, FiInstagram } from 'react-icons/fi'
 
 import './App.css';
 import Input from './components/Input'
@@ -28,6 +29,13 @@ const App = () => {
       <Input changeDistrito={changeDistrito} />
       <h1>{distrito.name}</h1>
       <InfoDisplay info={info} />
+      <div className="footer">
+        <h3>© José Marques, Dez 2020</h3>
+        <div className="social">
+          <a href="https://github.com/JJMarques" target="_blank"><FiGithub /></a>
+          <a href="https://www.instagram.com/jmarques_98/" target="_blank"><FiInstagram /></a>
+        </div>
+      </div>
     </div>
   );
 }

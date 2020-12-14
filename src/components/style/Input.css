@@ -20,7 +20,7 @@
         border: none;
         width: 500px;
         outline: none;
-        font-size: 1.1em;
+        font-size: 1em;
         padding: 1em;
         border-radius: 10px;
     }
@@ -32,6 +32,7 @@
     opacity: 0.4;
     border-bottom: rgb(134, 134, 134) 1px solid;
     cursor: pointer;
+    font-size: 0.9em;
 }
 
     .AutocompleteBtn:hover {
@@ -41,3 +42,23 @@
     .AutocompleteBtn:last-child {
         border-radius: 0px 0px 10px 10px
     }
+
+@media only screen and (max-width: 1150px) {
+    .Input {
+        width: 80%;
+    }
+
+    .Input input {
+        width: 100%;
+    }
+
+    .AutocompleteBtn {
+        padding: 1em;
+        background-color: white;
+        width: 280px;
+        opacity: 0.4;
+        border-bottom: rgb(134, 134, 134) 1px solid;
+        cursor: pointer;
+        font-size: 0.9em;
+    }
+}
