@@ -33,8 +33,11 @@ const InfoDisplay = ({ info }) => {
     });
 
     return (
-        <div className="InfoDisplay">
-            {infoDisplay}
+        <div style={{ zIndex: '999' }}>
+            <div className="InfoDisplay">
+                {infoDisplay}
+            </div>
+            <h3 className="InfoAPI">Dados oficiais disponibilizados pelo <a href="https://www.ipma.pt/pt" target="_blank">IPMA</a></h3>
         </div>
     )
 }
