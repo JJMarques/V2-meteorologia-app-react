@@ -33,11 +33,11 @@ const InfoDisplay = ({ info }) => {
     });
 
     return (
-        <div style={{ zIndex: '999' }}>
+        <div style={{ zIndex: '999', width: '100%', display: 'flex', flexDirection:'column', alignItems: 'center' }}>
             <div className="InfoDisplay">
                 {infoDisplay}
             </div>
-            <h3 className="InfoAPI">Dados oficiais disponibilizados pelo <a href="https://www.ipma.pt/pt" target="_blank">IPMA</a></h3>
+            <h3 className="InfoAPI">Dados oficiais <br/> disponibilizados pelo <a href="https://www.ipma.pt/pt" target="_blank">IPMA</a></h3>
         </div>
     )
 }
