@@ -30,10 +30,10 @@ const App = () => {
       <h1>{distrito.name}</h1>
       <InfoDisplay info={info} />
       <div className="footer">
-        <h3>© José Marques, Dez 2020</h3>
+        <strong>© José Marques, Dez 2020</strong>
         <div className="social">
-          <a href="https://github.com/JJMarques" target="_blank"><FiGithub /></a>
-          <a href="https://www.instagram.com/jmarques_98/" target="_blank"><FiInstagram /></a>
+          <a href="https://github.com/JJMarques" target="_blank" rel="noreferrer" aria-label="Github de José Marques"><FiGithub /></a>
+          <a href="https://www.instagram.com/jmarques_98/" target="_blank" rel="noreferrer" aria-label="Instagram de José Marques"><FiInstagram /></a>
         </div>
       </div>
     </div>

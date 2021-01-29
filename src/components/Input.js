@@ -40,25 +40,32 @@ const Input = ({ changeDistrito }) => {
     
     return (
         <div className="Input">
-            <h2>Pesquise o seu distrito 🔍</h2>
+            <label>Pesquise o seu distrito 🔍
             <input 
                 value={query}
                 type="search"
                 autoFocus
                 onChange={(e) => setQuery(e.target.value)}
             />
+            </label>
+            <div className="AutocompleteBox">
             {distritos.map((item) => {
                 if (query !== "") {
                     return (
                         <div 
                             className="AutocompleteBtn" 
                             key={item.id}
-                            onClick={() => {changeDistrito(item); setQuery("")}}
+                            onClick={() => {
+                                changeDistrito(item); 
+                                setQuery("")
+                                localStorage.setItem('coimbra', item.name)
+                            }}
                         >
                             {item.name}
                         </div>)
                 }
             })}
+            </div>
         </div>
     )   
 }
