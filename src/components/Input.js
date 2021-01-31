@@ -52,7 +52,8 @@ const Input = ({ changeDistrito }) => {
             {distritos.map((item) => {
                 if (query !== "") {
                     return (
-                        <div 
+                        <button 
+                            tabindex="0"
                             className="AutocompleteBtn" 
                             key={item.id}
                             onClick={() => {
@@ -62,7 +63,7 @@ const Input = ({ changeDistrito }) => {
                             }}
                         >
                             {item.name}
-                        </div>)
+                        </button>)
                 }
             })}
             </div>
