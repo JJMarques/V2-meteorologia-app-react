@@ -1,26 +1,24 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { FiGithub, FiInstagram } from 'react-icons/fi'
-
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { FiGithub, FiInstagram } from 'react-icons/fi';
 import './App.css';
-import Input from './components/Input'
-import InfoDisplay from './components/InfoDisplay'
+import Input from './components/Input';
+import InfoDisplay from './components/InfoDisplay';
 
 const App = () => {
-
-  const [distrito, setDistrito] = useState({})
-  const [info, setInfo] = useState([])
+  const [distrito, setDistrito] = useState({});
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     if (Object.keys(distrito).length !== 0) {
       axios.get(`https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${distrito.id}.json`)
-      .then(r => setInfo(r.data.data))
-    }
-  }, [distrito])
+      .then(r => setInfo(r.data.data));
+    };
+  }, [distrito]);
 
   const changeDistrito = (item) => {
-    setDistrito(item)
-  }
+    setDistrito(item);
+  };
 
   return (
     <div className="App">
@@ -38,6 +36,6 @@ const App = () => {
       </div>
     </div>
   );
-}
+};
 
 export default App;

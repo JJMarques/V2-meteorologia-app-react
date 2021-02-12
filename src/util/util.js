@@ -1,7 +1,6 @@
 import { TiWeatherCloudy, TiWeatherDownpour, TiWeatherSunny,TiWeatherSnow, TiWeatherStormy } from 'react-icons/ti'
 
 export const getWeekDay = (d) => {
-    
     let m = d.getMonth() + 1
     let mf
     switch (m) {
